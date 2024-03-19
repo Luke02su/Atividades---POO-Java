@@ -13,6 +13,7 @@ public class Conta {
         this.numero = numero;
         this.titular = titular;
         this.valor = valor;
+        this.scan = new Scanner(System.in);
     }
     
         public int getNumero() {
