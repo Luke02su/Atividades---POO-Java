@@ -17,21 +17,18 @@ public class DataTeste {
         data1.displayData();
         
         System.out.print("\nDigite um dia: ");
-        data1.getDia();
         int dia = scan.nextInt();
         data1.setDia(dia);
         
         System.out.print("Digite um mês: ");
-        data1.getMes();
         int mes = scan.nextInt();
         data1.setMes(mes);
         
         System.out.print("Digite um ano: ");
-        data1.getAno();
         int ano = scan.nextInt();
         data1.setAno(ano);
         
-        System.out.print("Data cadastrada manualmente: ");
+        System.out.print("\nData cadastrada manualmente: ");
         data1.displayData();
     }
 }
