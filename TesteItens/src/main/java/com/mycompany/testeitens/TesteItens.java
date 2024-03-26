@@ -3,11 +3,11 @@ package com.mycompany.testeitens;
 public class TesteItens {
     public static void main(String[] args) {
     
-        Itens i1 = new Itens("0", "0", 0, 0);
+        Itens i1 = new Itens("0", "0", 0, 0); // inicializando atributos no construtor com valor 0
         Itens i2 = new Itens("0", "0", 0, 0);
         Itens i3 = new Itens("0", "0", 0, 0);
         
-        System.out.println("----- Atributos inicialzados com valor 0 -----\n");
+        System.out.println("----- Atributos inicializados com valor 0 -----\n");
         System.out.println("Numero: " + i1.getNumero() + " Descrição: " + i1.getDescricao() + " Quantidade: " + i1.getQtd() + " Preço: " + i1.getPreco());
         System.out.println("Numero: " + i2.getNumero() + " Descrição: " + i2.getDescricao() + " Quantidade: " + i2.getQtd() + " Preço: " + i2.getPreco());       
         System.out.println("Numero: " + i3.getNumero() + " Descrição: " + i3.getDescricao() + " Quantidade: " + i3.getQtd() + " Preço: " + i3.getPreco());
