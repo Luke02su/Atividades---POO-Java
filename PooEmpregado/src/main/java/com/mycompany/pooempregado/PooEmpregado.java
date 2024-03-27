@@ -19,7 +19,7 @@ public class PooEmpregado {
 
         System.out.println("\nSalário mensal com aumento de 10%: ");
         System.out.println("Empregado 1: " + empregado1.getNome() + " " + empregado1.getSobrenome() + ", R$ " + empregado1.getSalarioMensal()); //  salarioMensal com aumento de 10% nó salarioMensal
-        System.out.println("Empregado 2: " + empregado2.getNome() + " " + empregado2.getSobrenome() + ", R$ " + empregado2.salarioMensal()); 
+        System.out.println("Empregado 2: " + empregado2.getNome() + " " + empregado2.getSobrenome() + ", R$ " + empregado2.getSalarioMensal()); 
         
         System.out.println("\nSalário anual com aumento de 10%: ");
         System.out.println("Empregado 1: " + empregado1.getNome() + " " + empregado1.getSobrenome() + ", R$ " + empregado1.salarioAnual()); // puxa funcão retorno salarioAnual (salarioMensal * 12) com aumento de 10% nó salarioMensal
