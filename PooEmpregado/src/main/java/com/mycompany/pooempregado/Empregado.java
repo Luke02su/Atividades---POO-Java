@@ -36,7 +36,7 @@ public class Empregado {
     }
     
     public double salarioAnual() { // retorna valor do salário anual (salário anual * mensal);
-        return salarioMensal *= 12;
+        return salarioMensal * 12;
     }
     
     public void aumentoSalarial() { // realiza acão de aumentar o salário mensal em 10% -- sem retorno
