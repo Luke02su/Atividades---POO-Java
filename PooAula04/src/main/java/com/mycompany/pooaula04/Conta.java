@@ -1,12 +1,12 @@
 package com.mycompany.pooaula04;
 
-public class Conta {
+abstract public class Conta {
     private int codigo;
     private String titular;
     private double saldo;
-    
+
     public Conta() {
-    
+
     }; // construtor vazio para usar na ContaEmpresa (Java já faz isso automático)
 
    public Conta(int codigo, String titular, double saldo) { // este construtor sobreescreve o vazio
@@ -38,12 +38,8 @@ public class Conta {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
+
+    abstract public void depositar(double valor);
     
-    public void depositar(double valor) {
-        this.setSaldo(this.getSaldo() + valor);
-    }
-    
-    public void sacar(double valor) {
-        this.setSaldo(this.getSaldo() - valor);
-    }   
+    abstract public void sacar(double valor); 
 }
