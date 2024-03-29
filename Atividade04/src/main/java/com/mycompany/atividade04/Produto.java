@@ -1,7 +1,7 @@
 package com.mycompany.atividade04;
 
-abstract public class Produto {
-    private int codigo;
+abstract public class Produto { // classe produto abstrata (superclasse) será usada pelas subclasses peça e peça importada (herança)
+    private int codigo; // abstração das características (atributos) e encapsulamento (privado)
     private String nome;
     private double precoCusto;
     private int margemLucro;
@@ -11,7 +11,9 @@ abstract public class Produto {
     private int anoInicial;
     private int anoFinal;
     
-    public Produto () {};
+    public Produto () { // construtor vazio criado para ser substituído pelo construtor seguinte com parâmetros/assinaturas
+    
+    };
 
     public Produto(int codigo, String nome, double precoCusto, int margemLucro, double precoVenda, String marcaVeiculo, String modeloVeiculo, int anoInicial, int anoFinal) {
         this.codigo = codigo;
@@ -63,7 +65,7 @@ abstract public class Produto {
     }
 
     public void setPrecoVenda(double precoVenda) {
-         this.precoVenda = getPrecoCusto() + (getPrecoVenda() * (getMargemLucro() / 100.00)); //O preço de venda é o preço de custo + % margem de lucro.
+         this.precoVenda = precoVenda;
     }
 
     public String getMarcaVeiculo() {
@@ -98,12 +100,23 @@ abstract public class Produto {
         this.anoFinal = anoFinal;
     }
     
-    //Método normal
+    //Método da própria classe
     public void imprimir() {
+        System.out.println("----- PRODUTO -----");
+        System.out.println("Código da peça: " + this.getCodigo());
+        System.out.println("Nome da peça: " + this.getNome());
+        System.out.println("Preço de  custo: R$" + this.getPrecoCusto());
+        System.out.println("Margem de lucro: " + this.getMargemLucro() + "%");
+        System.out.println("Preço de venda: R$" + this.getPrecoVenda());
+        System.out.println("Marca do veículo: " + this.getMarcaVeiculo());
+        System.out.println("Modelo do veículo: " + this.getModeloVeiculo());
+        System.out.println("Ano inicial de produção: " + this.getAnoInicial());
+        System.out.println("Ano final de produção: " + this.getAnoFinal());
         
+        System.out.println();
     }
     //Métodos abstratos declarados
-    abstract public void calcularPrecoVenda();
+    abstract public void calcularPrecoVenda(); // polimorfismo (usado de uma forma diferente nas subclasses peça e peça importada
     
-    abstract public void imprimirValorDetalhado();
+    abstract public void imprimirValorDetalhado(); // polimorfismo (usado de uma forma diferente nas subclasses peça e peça importada
 }

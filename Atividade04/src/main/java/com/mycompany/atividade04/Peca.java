@@ -1,13 +1,14 @@
+
 package com.mycompany.atividade04;
 
-public class Peca extends Produto {
+public class Peca extends Produto { // subclasse peça é extensão da superclasse produto (herança)
     private String fabricantePeca;
     private double taxaImpostoEstadual;
     
     public Peca(int codigo, String nome, double precoCusto, int margemLucro, double precoVenda, String marcaVeiculo, String modeloVeiculo, int anoInicial, int anoFinal, String fabricantePeca, double taxaImpostoEstadual) {
-        super(codigo, nome, precoCusto, margemLucro, precoVenda, marcaVeiculo, modeloVeiculo, anoInicial, anoFinal);
+        super(codigo, nome, precoCusto, margemLucro, precoVenda, marcaVeiculo, modeloVeiculo, anoInicial, anoFinal); // atributos da super classe produto
         this.setFabricantePeca(fabricantePeca);
-        this.setTaxaImpostoEstadual(20);
+        this.setTaxaImpostoEstadual(taxaImpostoEstadual);
     }
     
     //Método especiais
@@ -27,8 +28,9 @@ public class Peca extends Produto {
         this.taxaImpostoEstadual = taxaImpostoEstadual;
     }
     
-    //Métodos da própria classe
+    //Método da própria classe
     public void imprimirPecaNacional() {
+        System.out.println("----- PEÇA NACIONAL -----");
         System.out.println("Código da peça: " + getCodigo());
         System.out.println("Nome da peça: " + getNome());
         System.out.println("Preço de  custo: R$" + getPrecoCusto());
@@ -40,16 +42,20 @@ public class Peca extends Produto {
         System.out.println("Ano final de produção: " + getAnoFinal());
         System.out.println("Fabricante da peça: " + this.getFabricantePeca());
         System.out.println("Taxa de imposto estadual: R$" + this.getTaxaImpostoEstadual());
+        
+        System.out.println();
     }
     
     //Métodos abstratos implementados
     @Override
     public void calcularPrecoVenda() {
-        setPrecoVenda(getPrecoVenda() + (getPrecoCusto() * (this.getTaxaImpostoEstadual() / 100))); //Para as peças nacionais compradas em outro estado, adicione ao preço de venda a taxa de imposto de 20% sobre o preço de custo.
+        setPrecoVenda(getPrecoVenda() + this.getTaxaImpostoEstadual() + (getPrecoCusto() * (20.00 / 100.00))); //Para as peças nacionais compradas em outro estado, adicione ao preço de venda a taxa de imposto de 20% sobre o preço de custo.
     }
     
     @Override
     public void imprimirValorDetalhado() {
-        System.out.println("Valor de venda da peça nacional: " + getPrecoVenda());
+        System.out.println("Valor de venda da peça nacional: R$" + getPrecoVenda());
+        
+        System.out.println();
     }
 }
