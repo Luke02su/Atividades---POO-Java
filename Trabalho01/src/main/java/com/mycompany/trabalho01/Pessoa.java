@@ -1,6 +1,7 @@
+
 package com.mycompany.trabalho01;
 
-public class Pessoa {
+public class Pessoa { // superclasse Pessoa
     private String nome;
     private String endereco;
     private String telefone;

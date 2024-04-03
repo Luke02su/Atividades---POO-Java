@@ -1,6 +1,6 @@
 package com.mycompany.trabalho01;
 
-public class PessoaJuridica extends Pessoa {
+public class PessoaJuridica extends Pessoa { // subclasse PessoaJuridica
     private String cnpj;
     private String inscricaoEstadual;
     private double faturamentoMensal;
@@ -104,7 +104,7 @@ public PessoaJuridica(String nome, String endereco, String telefone, int codigo,
     public void alterarFaturamento(double valor) {
         System.out.println("----- ALTERADO O FATURAMENTO DE PESSOA JURÍDICA (acrescentado / subtraído) -----");
         this.setFaturamentoMensal(this.getFaturamentoMensal() + valor);
-        this.setFaixa(this.definirFaixa(this.getFaturamentoMensal() * 12.00)); // necessário para imprimir a faixa atualizada após alteração faturamento mensal
+        this.setFaixa(this.definirFaixa(this.getFaturamentoMensal() * 12.00)); // necessário para retornar a faixa atualizada após alteração faturamento mensal
     }
     
     public void gerarGuiaPagamento() {

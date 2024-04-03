@@ -1,18 +1,18 @@
 package com.mycompany.trabalho01;
-import java.util.Date;
+import java.time.LocalDate;
 
-public class PessoaFisica extends Pessoa {
+public class PessoaFisica extends Pessoa { // subclasse PessoaFisica
     private String nomePai;
     private String nomeMae;
     private char sexo;
-    private Date dataNascimento;
+    private LocalDate dataNascimento;
     private String cpf;
     private String rg;
     private String nacionalidade;
     private String naturalidade;
     private double salario;
 
-    public PessoaFisica(String nome, String endereco, String telefone, int codigo, String nomePai, String nomeMae, char sexo, Date dataNascimento, String cpf, String rg, String nacionalidade, String naturalidade, double salario) {
+    public PessoaFisica(String nome, String endereco, String telefone, int codigo, String nomePai, String nomeMae, char sexo, LocalDate dataNascimento, String cpf, String rg, String nacionalidade, String naturalidade, double salario) {
         super(nome, endereco, telefone, codigo);
         this.setNomePai(nomePai);
         this.setNomeMae(nomeMae);
@@ -49,11 +49,11 @@ public class PessoaFisica extends Pessoa {
         this.sexo = sexo;
     }
 
-    public Date getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return this.dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -103,8 +103,8 @@ public class PessoaFisica extends Pessoa {
         System.out.println("Nome: " + super.getNome());
         System.out.println("Endereço: " + super.getEndereco());
         System.out.println("Telefone: " + super.getTelefone());
-        System.out.println("Nome do pai:" + this.getNomePai());
-        System.out.println("Nome da mãe:" + this.getNomeMae());
+        System.out.println("Nome do pai: " + this.getNomePai());
+        System.out.println("Nome da mãe: " + this.getNomeMae());
         System.out.println("Sexo: " + this.getSexo());
         System.out.println("Data de nascimento: " + this.getDataNascimento());
         System.out.println("CPF: " + this.getCpf());
