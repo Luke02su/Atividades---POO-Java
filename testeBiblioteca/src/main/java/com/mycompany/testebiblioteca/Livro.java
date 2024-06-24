@@ -2,15 +2,15 @@ package com.mycompany.testebiblioteca;
 import java.util.Scanner;
 
 public class Livro {
-    
-    Scanner scan = new Scanner (System.in);
             
     private String autor;
     private String titulo;
     public int numPaginas;
     
     public Livro () {
-        
+        this.setAutor(null);
+        this.setTitulo(null);
+        this.setNumPaginas(0);
     }
     
     public String getAutor() {
@@ -38,17 +38,21 @@ public class Livro {
     }
     
     public void ler() {
+        
+        Scanner scan = new Scanner (System.in);
+   
         System.out.println("Autor: ");
         this.setAutor((scan.nextLine()));
-        System.out.println("Titulo: ");
+        System.out.println("Título: ");
         this.setTitulo((scan.nextLine()));
-        System.out.println("Numero de paginas: ");
+        System.out.println("Número de paginas: ");
         this.setNumPaginas((scan.nextInt()));
     }
     
     public void imprimir() {
+        
         System.out.println("Autor: " + this.getAutor());
-        System.out.println("Numero de p" + this.getTitulo());
-        System.out.println("Numero de paginas: " + this.getNumPaginas());
+        System.out.println("Título" + this.getTitulo());
+        System.out.println("Número de páginas: " + this.getNumPaginas());
     }
 }
