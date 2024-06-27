@@ -21,7 +21,14 @@ public abstract class Animal {
     
     public abstract void emitirSom ();
     
-    public abstract void imprimirCaracteristicas();
+    public void imprimirAnimal () {
+        System.out.println("--- CARACTERÍSTICAS DO ANIMAL ---");
+        System.out.println("Cor: " + this.getCor());
+        System.out.println("Quantidade de patas: " + this.getQtdPatas());
+        System.out.println("Quantidade de olhos: " + this.getQtdOlhos());
+        System.out.println("Alimentação: " + this.getAlimentacao());
+        System.out.println("Idade: " + this.getIdade());
+    }
 
     public String getCor() {
         return cor;
