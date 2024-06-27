@@ -22,5 +22,13 @@ public class TesteAnimal {
         t.imprimirTubarao();
         t.setIdade(9);
         System.out.println("Idade atualizada de tubarão: " + t.getIdade());
+        
+        Lobo l = new Lobo("Lobo guará", "Lobo 1", true, "Marrom", 4, 2, "Onívoro", 5);
+        
+        l.comer();
+        l.locomover();
+        l.emitirSom();
+        l.imprimirAnimal();
+        l.imprimirCachorro();
     }
 }
