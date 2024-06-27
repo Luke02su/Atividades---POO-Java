@@ -30,16 +30,16 @@ public class Peca extends Produto { // subclasse peça é extensão da superclas
     
     //Método da própria classe
     public void imprimirPecaNacional() {
-        System.out.println("----- PEÇA NACIONAL -----");
-        System.out.println("Código da peça: " + getCodigo());
-        System.out.println("Nome da peça: " + getNome());
-        System.out.println("Preço de  custo: R$" + getPrecoCusto());
-        System.out.println("Margem de lucro: " + getMargemLucro() + "%");
-        System.out.println("Preço de venda: R$" + getPrecoVenda());
-        System.out.println("Marca do veículo: " + getMarcaVeiculo());
-        System.out.println("Modelo do veículo: " + getModeloVeiculo());
-        System.out.println("Ano inicial de produção: " + getAnoInicial());
-        System.out.println("Ano final de produção: " + getAnoFinal());
+        System.out.println("----- PEÇA NACIONAL -----"); // poderia reaproveitar a impressão de prodruto usando super.imprimir(), sem ter a necessidade de duplicar os comandos
+        System.out.println("Código da peça: " + super.getCodigo());
+        System.out.println("Nome da peça: " + super.getNome());
+        System.out.println("Preço de  custo: R$" + super.getPrecoCusto());
+        System.out.println("Margem de lucro: " + super.getMargemLucro() + "%");
+        System.out.println("Preço de venda: R$" + super.getPrecoVenda());
+        System.out.println("Marca do veículo: " + super.getMarcaVeiculo());
+        System.out.println("Modelo do veículo: " + super.getModeloVeiculo());
+        System.out.println("Ano inicial de produção: " + super.getAnoInicial());
+        System.out.println("Ano final de produção: " + super.getAnoFinal());
         System.out.println("Fabricante da peça: " + this.getFabricantePeca());
         System.out.println("Taxa de imposto estadual: R$" + this.getTaxaImpostoEstadual());
         
@@ -49,12 +49,12 @@ public class Peca extends Produto { // subclasse peça é extensão da superclas
     //Métodos abstratos implementados
     @Override
     public void calcularPrecoVenda() {
-        setPrecoVenda(getPrecoVenda() + this.getTaxaImpostoEstadual() + (getPrecoCusto() * (20.00 / 100.00))); //Para as peças nacionais compradas em outro estado, adicione ao preço de venda a taxa de imposto de 20% sobre o preço de custo.
+        super.setPrecoVenda(super.getPrecoVenda() + this.getTaxaImpostoEstadual() + (super.getPrecoCusto() * (20.00 / 100.00))); //Para as peças nacionais compradas em outro estado, adicione ao preço de venda a taxa de imposto de 20% sobre o preço de custo.
     }
     
     @Override
     public void imprimirValorDetalhado() {
-        System.out.println("Valor de venda da peça nacional: R$" + getPrecoVenda());
+        System.out.println("Valor de venda da peça nacional: R$" + super.getPrecoVenda());
         
         System.out.println();
     }
