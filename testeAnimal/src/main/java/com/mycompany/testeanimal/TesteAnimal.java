@@ -8,8 +8,19 @@ public class TesteAnimal {
         c.locomover();
         c.comer();
         c.emitirSom();
-        c.imprimirCaracteristicas();
+        c.imprimirAnimal();
+        c.imprimirCachorro();
         c.setIdade(14);
-        System.out.println("Idade atualizada do cachorro: " + c.getIdade());    
+        System.out.println("Idade atualizada do cachorro: " + c.getIdade());
+        
+        Tubarao t = new Tubarao("Salgada", "Cartilagem", false, "Cinza", 0, 2, "Carnívoro", 6);
+        
+        t.locomover();
+        t.comer();
+        t.emitirSom();
+        t.imprimirAnimal();
+        t.imprimirTubarao();
+        t.setIdade(9);
+        System.out.println("Idade atualizada de tubarão: " + t.getIdade());
     }
 }
