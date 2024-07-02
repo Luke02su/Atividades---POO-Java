@@ -1,7 +1,7 @@
 
 package com.mycompany.trabalho01;
 
-public abstract class Pessoa { // superclasse Pessoa
+public class Pessoa { // superclasse Pessoa
     private String nome;
     private String endereco;
     private String telefone;
