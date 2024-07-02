@@ -1,7 +1,7 @@
 
 package com.mycompany.trabalho01;
 
-public class Pessoa { // superclasse Pessoa
+public abstract class Pessoa { // superclasse abstrata Pessoa (não pode ser implementada)
     private String nome;
     private String endereco;
     private String telefone;
