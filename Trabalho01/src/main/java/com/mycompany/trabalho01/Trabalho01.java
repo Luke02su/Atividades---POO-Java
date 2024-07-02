@@ -5,6 +5,10 @@ import java.time.format.DateTimeFormatter;
 public class Trabalho01 {
 
     public static void main(String[] args) {
+
+        // Pessoa p1 = new Pessoa("João Maria", "Rua A", "(34) 9 9834-0832", 1); // objeto da classe Pessoa instanciado (não pode ser instanciado um objeto dessa classe, pois ela é abstrata)
+
+        // p1.imprimir();
         
         DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy"); //formatando
         String dataNascimento; // criando String
