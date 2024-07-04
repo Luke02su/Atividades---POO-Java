@@ -14,5 +14,7 @@ public class TestePessoa {
         c.imprimir();
         c.emprestarItem(1);
         c.imprimir();
+        c.devolverItem(1);
+        c.imprimir();
     }
 }
