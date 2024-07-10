@@ -47,7 +47,7 @@ public class Cliente extends Pessoa {
     }
     
     public void devolverItem(int qtdItem) {
-        if (qtdItem > 0) {
+        if (qtdItem > 0 && qtdItem <= this.getItensComOCliente()) {
             this.setItensComOCliente((this.getItensComOCliente() - qtdItem));
             this.setLimiteEmprestimo(this.getLimiteEmprestimo() + this.getItensComOCliente());
         } else {
