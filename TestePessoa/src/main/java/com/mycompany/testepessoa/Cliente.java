@@ -15,7 +15,9 @@ public class Cliente extends Pessoa {
     }
 
     public void setLimiteEmprestimo(int limiteEmprestimo) {
-        this.limiteEmprestimo = limiteEmprestimo;
+        if (limiteEmprestimo >= 0) {
+            this.limiteEmprestimo = limiteEmprestimo;
+        }
     }
 
     public int getItensComOCliente() {
