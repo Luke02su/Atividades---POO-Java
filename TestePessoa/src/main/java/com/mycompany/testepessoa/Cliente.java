@@ -6,7 +6,7 @@ public class Cliente extends Pessoa {
 
     public Cliente(int codigo, String nome, String cpf, char sexo, String telefone, int limiteEmprestimo, int itensComOCliente) {
         super(codigo, nome, cpf, sexo, telefone);
-        this.limiteEmprestimo = limiteEmprestimo;
+        this.limiteEmprestimo = 10;
         this.itensComOCliente = itensComOCliente;
     }
 
@@ -46,7 +46,7 @@ public class Cliente extends Pessoa {
         System.out.println();
     }
     
-    public void devolverItem(int qtdItem) {
+    public void devolverItem(int qtdItem && qtdItem <= this.getItensComOCliente()) {
         if (qtdItem > 0 && qtdItem <= this.getItensComOCliente()) {
             this.setItensComOCliente((this.getItensComOCliente() - qtdItem));
             this.setLimiteEmprestimo(this.getLimiteEmprestimo() + this.getItensComOCliente());
