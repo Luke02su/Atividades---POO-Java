@@ -53,7 +53,7 @@ public class Funcionario extends Pessoa {
     }
     
     @Override
-    public void imprimir () {
+    public void imprimir() {
         System.out.println("\n--- DADOS DE FUNCIONÁRIOS --- ");
         super.imprimir();
         System.out.println("Número de registro: " + this.getNumeroRegistro());
@@ -62,6 +62,14 @@ public class Funcionario extends Pessoa {
         System.out.println("Número total de funcionários: " + this.getNumeroTotalFuncionarios());
     }
     
+    public void aumentarSalario() {
+        System.out.println("--\n --- SALÁRIO DE FUNCIONÁRIO AUMENTADO EM 10% ---");
+        this.setSalario(this.getSalario() * 1.10);
+    }
     
+    public void aumentarSalario(int porcentagem) {
+        System.out.println("\n --- SALÁRIO DE FUNCIONÁRIO AUMENTADO VIA PARÂMETRO EM ---" + porcentagem);
+        this.setSalario(this.getSalario() + (this.getSalario() * ((double)porcentagem / 100.00)));
+    }
   
 }
