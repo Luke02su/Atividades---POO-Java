@@ -1,11 +1,12 @@
 package com.mycompany.lsd.minhaempresa;
 
-public class Pessoa {
+public abstract class Pessoa {
 
-    private int codigo = 0;
+    private int codigo;
+    private static int codigoSequencial = 1;
     private String nome;
     private int numeroCPF;
-    public static int numeroTotalPessoas = 0;
+    private static int numeroTotalPessoas = 0;
     private boolean pertenceObjeto;
 
     public Pessoa() {
@@ -13,7 +14,7 @@ public class Pessoa {
     }
     
     public Pessoa(String nome, int numeroCPF) {
-        this.codigo++;
+        this.codigo = codigoSequencial++;
         this.nome = nome;
         this.numeroCPF = numeroCPF;
         this.numeroTotalPessoas++;
@@ -44,8 +45,8 @@ public class Pessoa {
         return numeroTotalPessoas;
     }
 
-    public void setNumeroTotalPessoas(int aNumeroTotalPessoas) {
-        numeroTotalPessoas = aNumeroTotalPessoas;
+    private void setNumeroTotalPessoas(int NumeroTotalPessoas) {
+        numeroTotalPessoas = NumeroTotalPessoas;
     }
 
     public boolean isPertenceObjeto() {
