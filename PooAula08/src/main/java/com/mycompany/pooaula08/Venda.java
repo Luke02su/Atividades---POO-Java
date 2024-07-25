@@ -54,7 +54,7 @@ public class Venda {
         for(int i = 0; i < this.itens.size(); i++) {
             System.out.print("#" + (i+1) + "\t" + this.itens.get(i).getProduto().getNome());
             System.out.print("\t" + this.itens.get(i).getQuantidade());
-            System.out.print("\t" + this.itens.get(i).getPreco());
+            System.out.print("\t" + this.itens.get(i).getProduto().getPreco());
             double total = (double)this.itens.get(i).getPreco() * this.itens.get(i).getQuantidade(); // primeiro qquantidade vira double para realizar calculo, pois é int
             System.out.println("\t" + total);
             this.totalVenda += total;
