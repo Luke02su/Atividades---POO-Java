@@ -17,7 +17,7 @@ public class ContaPoupanca extends Conta {
     }
     
     @Override
-    public void imprimir() { // Polimorfismo de sobrecarga
+    public void imprimir() { // Polimorfismo de sobreposição
         super.imprimir();
         System.out.println("Taxa de juros: " + this.getTaxaJuros());
     }
